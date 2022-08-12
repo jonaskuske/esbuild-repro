@@ -1,0 +1,27 @@
+diff --git a/lib/main.js b/lib/main.js
+index 04501b1af9cebce128ee844f441cbacdaf1f157b..d8b4373d5712aa53f8fdc5767559c32dd7422347 100644
+--- a/lib/main.js
++++ b/lib/main.js
+@@ -1849,16 +1849,16 @@ by esbuild to install the correct binary executable for your current platform.`)
+       throw e;
+     }
+   }
+-  let isYarnPnP = false;
++  let pnpapi = false;
+   try {
+-    require("pnpapi");
+-    isYarnPnP = true;
++    pnpapi = require("pnpapi");
+   } catch (e) {
+   }
+-  if (isYarnPnP) {
+-    const esbuildLibDir = path.dirname(require.resolve("esbuild"));
+-    const binTargetPath = path.join(esbuildLibDir, `pnpapi-${pkg}-${path.basename(subpath)}`);
++  if (pnpapi) {
++    const root = pnpapi.getPackageInformation(pnpapi.topLevel).packageLocation;
++    const binTargetPath = path.join(root, 'node_modules/.esbuild', version, `pnpapi-${pkg}-${path.basename(subpath)}`);
+     if (!fs.existsSync(binTargetPath)) {
++      fs.mkdirSync(path.dirname(binTargetPath), { recursive: true });
+       fs.copyFileSync(binPath, binTargetPath);
+       fs.chmodSync(binTargetPath, 493);
+     }

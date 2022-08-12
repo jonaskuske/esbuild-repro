@@ -1,0 +1,6 @@
+{
+  // fails:
+  "extends": "@vue/tsconfig/tsconfig.json"
+  // works:
+  // "extends": "./.yarn/__virtual__/@vue-tsconfig-virtual-2025af2c71/0/cache/@vue-tsconfig-npm-0.1.3-07ae9b676e-8150a24497.zip/node_modules/@vue/tsconfig/tsconfig.json"
+}

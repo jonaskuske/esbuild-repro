@@ -1,0 +1,16 @@
+{
+  "name": "esbuild-repro",
+  "private": true,
+  "packageManager": "yarn@3.2.2",
+  "scripts": {
+    "start": "node -e \"require('esbuild').build({ outfile: 'dist/_', entryPoints: ['main.ts'] })\""
+  },
+  "devDependencies": {
+    "@vue/tsconfig": "^0.1.3",
+    "esbuild": "^0.15.1",
+    "typescript": "^4.7.4"
+  },
+  "resolutions": {
+    "esbuild@^0.15.1": "patch:esbuild@npm:0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch"
+  }
+}
