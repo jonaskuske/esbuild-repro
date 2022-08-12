@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "yarn@3.2.2",
   "scripts": {
-    "start": "node -e \"require('esbuild').build({ outfile: 'dist/_', entryPoints: ['main.ts'] })\""
+    "start": "esbuild main.ts --outfile=dist/_"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.1.3",

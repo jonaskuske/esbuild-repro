@@ -1,5 +1,32 @@
+diff --git a/bin/esbuild b/bin/esbuild
+index bb23d5a2116bf21eaed949390ebac5f4c0c7e0d3..f0981c7a6ef5cbe154c4961d841c90b2d5b0a870 100755
+--- a/bin/esbuild
++++ b/bin/esbuild
+@@ -151,16 +151,16 @@ by esbuild to install the correct binary executable for your current platform.`)
+       throw e;
+     }
+   }
+-  let isYarnPnP = false;
++  let pnpapi = false;
+   try {
+-    require("pnpapi");
+-    isYarnPnP = true;
++    pnpapi = require("pnpapi");
+   } catch (e) {
+   }
+-  if (isYarnPnP) {
+-    const esbuildLibDir = path.dirname(require.resolve("esbuild"));
+-    const binTargetPath = path.join(esbuildLibDir, `pnpapi-${pkg}-${path.basename(subpath)}`);
++  if (pnpapi) {
++  const root = pnpapi.getPackageInformation(pnpapi.topLevel).packageLocation;
++  const binTargetPath = path.join(root, 'node_modules/.esbuild', '0.15.1', `pnpapi-${pkg}-${path.basename(subpath)}`);
+     if (!fs.existsSync(binTargetPath)) {
++      fs.mkdirSync(path.dirname(binTargetPath), { recursive: true });
+       fs.copyFileSync(binPath2, binTargetPath);
+       fs.chmodSync(binTargetPath, 493);
+     }
 diff --git a/lib/main.js b/lib/main.js
-index 04501b1af9cebce128ee844f441cbacdaf1f157b..d8b4373d5712aa53f8fdc5767559c32dd7422347 100644
+index 04501b1af9cebce128ee844f441cbacdaf1f157b..1cf5c655a8c22a24a4c3b505d988f61683116b1d 100644
 --- a/lib/main.js
 +++ b/lib/main.js
 @@ -1849,16 +1849,16 @@ by esbuild to install the correct binary executable for your current platform.`)
@@ -18,8 +45,8 @@ index 04501b1af9cebce128ee844f441cbacdaf1f157b..d8b4373d5712aa53f8fdc5767559c32d
 -    const esbuildLibDir = path.dirname(require.resolve("esbuild"));
 -    const binTargetPath = path.join(esbuildLibDir, `pnpapi-${pkg}-${path.basename(subpath)}`);
 +  if (pnpapi) {
-+    const root = pnpapi.getPackageInformation(pnpapi.topLevel).packageLocation;
-+    const binTargetPath = path.join(root, 'node_modules/.esbuild', version, `pnpapi-${pkg}-${path.basename(subpath)}`);
++  const root = pnpapi.getPackageInformation(pnpapi.topLevel).packageLocation;
++  const binTargetPath = path.join(root, 'node_modules/.esbuild', version, `pnpapi-${pkg}-${path.basename(subpath)}`);
      if (!fs.existsSync(binTargetPath)) {
 +      fs.mkdirSync(path.dirname(binTargetPath), { recursive: true });
        fs.copyFileSync(binPath, binTargetPath);

@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@vue/tsconfig", "virtual:1018de6eb09955e168948589756df24ffb030a488af0c01c2292affa8b40f050514a4556c4626df2fccbd0b4f5b96dfee17f3f61a02d4f28b3e16e586688d2ed#npm:0.1.3"],\
-            ["esbuild", "patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=cc3326&locator=esbuild-repro%40workspace%3A."],\
+            ["esbuild", "patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=8a814a&locator=esbuild-repro%40workspace%3A."],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\
@@ -70,10 +70,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["esbuild", [\
-        ["patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=cc3326&locator=esbuild-repro%40workspace%3A.", {\
-          "packageLocation": "./.yarn/cache/esbuild-patch-4d67ec05ca-346ff1eb92.zip/node_modules/esbuild/",\
+        ["patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=8a814a&locator=esbuild-repro%40workspace%3A.", {\
+          "packageLocation": "./.yarn/cache/esbuild-patch-9cada2a989-43db525896.zip/node_modules/esbuild/",\
           "packageDependencies": [\
-            ["esbuild", "patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=cc3326&locator=esbuild-repro%40workspace%3A."],\
+            ["esbuild", "patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=8a814a&locator=esbuild-repro%40workspace%3A."],\
             ["@esbuild/linux-loong64", "npm:0.15.1"],\
             ["esbuild-android-64", "npm:0.15.1"],\
             ["esbuild-android-arm64", "npm:0.15.1"],\
@@ -249,7 +249,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["esbuild-repro", "workspace:."],\
             ["@vue/tsconfig", "virtual:1018de6eb09955e168948589756df24ffb030a488af0c01c2292affa8b40f050514a4556c4626df2fccbd0b4f5b96dfee17f3f61a02d4f28b3e16e586688d2ed#npm:0.1.3"],\
-            ["esbuild", "patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=cc3326&locator=esbuild-repro%40workspace%3A."],\
+            ["esbuild", "patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=8a814a&locator=esbuild-repro%40workspace%3A."],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"]\
           ],\
           "linkType": "SOFT"\

@@ -250,7 +250,7 @@ __metadata:
 
 "esbuild@patch:esbuild@npm:0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::locator=esbuild-repro%40workspace%3A.":
   version: 0.15.1
-  resolution: "esbuild@patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=cc3326&locator=esbuild-repro%40workspace%3A."
+  resolution: "esbuild@patch:esbuild@npm%3A0.15.1#.yarn/patches/esbuild-npm-0.15.1-9cb29dc645.patch::version=0.15.1&hash=8a814a&locator=esbuild-repro%40workspace%3A."
   dependencies:
     "@esbuild/linux-loong64": 0.15.1
     esbuild-android-64: 0.15.1
@@ -318,7 +318,7 @@ __metadata:
       optional: true
   bin:
     esbuild: bin/esbuild
-  checksum: 346ff1eb926d99e017f35dc77c38babfd35d9a4d3834f90cc3335e8e6a5dece511b06cd5db7044cbbe0f6b29cb454bc1678996f9694e81e9486fc46f0fd6086a
+  checksum: 43db525896079a17b2605a777d3b5e18510c6c116ffcbe82ad957828238e1d7e0dfa57dda24cd1c7349f278c39718351432f87696c1c2995f3e7bdef557aa1e1
   languageName: node
   linkType: hard
 
